@@ -15,16 +15,19 @@ https://rajkumargalaxy.github.io/profile
 Submission successful at https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a/00000000006d0a5c
 """
 
+# How many cases we expect?
 T = int(input())
 arrays = []
-for i in range(T):
+# read all the input cases and store as list
+for c in range(T):
     _ = input()
     arrays.append(list(map(int, input().split())))
     
 costs = []
-for i in range(T):
-    arr = arrays[i]
-    cost = 0
+# iterate over all cases
+for c in range(T):
+    arr = arrays[c]
+    # be ready to accumulate the cost
     cost = 0
     # iterate over elements of the array from 0 to N-1
     for i in range(len(arr)-1):
@@ -37,7 +40,7 @@ for i in range(T):
         cost += pos-i+1
     costs.append(cost)
 # output
-for i in range(T):
-    print(f'Case #{i+1}: {costs[i]}')
+for c in range(T):
+    print(f'Case #{c+1}: {costs[c]}')
     
     
